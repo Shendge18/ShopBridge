@@ -9,12 +9,20 @@
     <div class="col-6">
         <h2 class="text-info">Product List</h2>
     </div>
-    <div class="col-6 text-right">
+    <div class="col-2 offset-4">
         <a asp-action="CreateProduct" class="btn btn-info"><i class="fas fa-plus"></i>&nbsp; Add New Product</a>
     </div>
 
 </div>
 <form method="post">
+    <div class="row">
+        <div class="col-md-3">
+         Minimum Price
+        </div>
+        <div class="col-md-3">
+          Maximum Price
+        </div>
+    </div>
     <div class="row">
         <div class="col-3">
             <input type="number" class="form-control" name="lowAmount"/>
