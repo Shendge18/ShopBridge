@@ -1,0 +1,14 @@
+﻿﻿
+@model int
+
+<td style="width: 150px">
+    <div class="btn-group">
+        <a asp-action="EditProductCategory"  class="btn btn-primary" asp-route-id="@Model">
+            <i class="far fa-edit"></i>
+        </a>
+        <a asp-action="ProductCategoryDetails"  class="btn btn-success" asp-route-id="@Model"><i class="fas fa-list-ul"></i></a>
+        <a asp-action="DeleteProductCategory"  class="btn btn-danger" asp-route-id="@Model">
+            <i class="fas fa-trash-alt"></i>
+        </a>
+    </div>
+</td>
