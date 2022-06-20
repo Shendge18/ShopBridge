@@ -14,10 +14,12 @@ namespace ShopBridgeDAL.Models
         [Required]
         [Display(Name = "Company Name")]
         public string CompanyName { get; set; }
+
         [Required]
+        [Display(Name = "Price (in Rupees)")]
         public decimal Price { get; set; }
 
-        [Display(Name = "Model")]
+        [Display(Name = "Model#/Description")]
         public string ModelName { get; set; }
         [Display(Name = "Product Color")]
         public string ProductColor { get; set; }

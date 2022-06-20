@@ -69,7 +69,6 @@ namespace ShopBridge.Controllers
 
         }
 
-        //GET Edit Action Method
 
         public ActionResult EditProduct(int? id)
         {
@@ -94,7 +93,6 @@ namespace ShopBridge.Controllers
 
         }
 
-        //POST Edit Action Method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -120,7 +118,6 @@ namespace ShopBridge.Controllers
         }
 
 
-        //GET Details Action Method
 
         public ActionResult Details(int? id)
         {
@@ -146,7 +143,6 @@ namespace ShopBridge.Controllers
 
         }
 
-        //POST Edit Action Method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -164,7 +160,6 @@ namespace ShopBridge.Controllers
 
         }
 
-        //GET Delete Action Method
 
         public ActionResult Delete(int? id)
         {
@@ -190,7 +185,7 @@ namespace ShopBridge.Controllers
 
         }
 
-        //POST Delete Action Method
+  
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -231,9 +226,9 @@ namespace ShopBridge.Controllers
         }
         #endregion
 
+
         #region Product Category
 
-        //GET Index Action Method
         public IActionResult ProductCategory()
         {
             try
@@ -246,14 +241,12 @@ namespace ShopBridge.Controllers
             }
         }
 
-        //GET Create Action Method
 
         public ActionResult AddProductCategory()
         {
             return View();
         }
 
-        //POST Create Action Method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -277,7 +270,6 @@ namespace ShopBridge.Controllers
             
         }
 
-        //GET Edit Action Method
 
         public ActionResult EditProductCategory(int? id)
         {
@@ -302,7 +294,6 @@ namespace ShopBridge.Controllers
             
         }
 
-        //POST Edit Action Method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -326,7 +317,6 @@ namespace ShopBridge.Controllers
             
         }
 
-        //GET Details Action Method
 
         public ActionResult ProductCategoryDetails(int? id)
         {
@@ -351,7 +341,6 @@ namespace ShopBridge.Controllers
             
         }
 
-        //POST Edit Action Method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -368,7 +357,6 @@ namespace ShopBridge.Controllers
 
         }
 
-        //GET Delete Action Method
 
         public ActionResult DeleteProductCategory(int? id)
         {
@@ -393,7 +381,6 @@ namespace ShopBridge.Controllers
             
         }
 
-        //POST Delete Action Method
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -434,6 +421,7 @@ namespace ShopBridge.Controllers
 
         #endregion
 
+
         #region Products
 
         public IActionResult Products()
@@ -449,8 +437,8 @@ namespace ShopBridge.Controllers
             }
         }
 
-        //POST Index action method
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Products(decimal? lowAmount, decimal? largeAmount)
         {
             try
@@ -470,7 +458,6 @@ namespace ShopBridge.Controllers
            
         }
 
-        //Get Create method
         public IActionResult CreateProduct()
         {
             try
@@ -487,8 +474,8 @@ namespace ShopBridge.Controllers
         }
 
 
-        //Post Create method
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateProduct(ProductDALModel productmodel)
         {
             try
@@ -518,7 +505,6 @@ namespace ShopBridge.Controllers
            
         }
 
-        //GET Edit Action Method
 
         public ActionResult EditProductItem(int? id)
         {
@@ -546,8 +532,8 @@ namespace ShopBridge.Controllers
            
         }
 
-        //POST Edit Action Method
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditProductItem(ProductDALModel products)
         {
             try
@@ -568,7 +554,6 @@ namespace ShopBridge.Controllers
            
         }
 
-        //GET Details Action Method
         public ActionResult ProductDetails(int? id)
         {
             try
@@ -593,7 +578,6 @@ namespace ShopBridge.Controllers
            
         }
 
-        //GET Delete Action Method
 
         public ActionResult DeleteProduct(int? id)
         {
@@ -618,10 +602,10 @@ namespace ShopBridge.Controllers
            
         }
 
-        //POST Delete Action Method
 
         [HttpPost]
         [ActionName("DeleteProduct")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteProductConfirm(int? id)
         {
             try
